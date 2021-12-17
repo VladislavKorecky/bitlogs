@@ -1,16 +1,39 @@
 """
-This module allows you to easily create logs for your code.
+[Version 1.0.0]
 
-Example:
-    from pylogs import Logger
-    from pylogs.message_types.critical_message import CriticalMessage
+This python library allows you to easily create logs for your code.
+
+Example code:
+    Code:
+        from pylogs import Logger
+        from pylogs.message_types.debug_message import DebugMessage
+
+        Logger.log(DebugMessage(), "Hello world!")
+    Output:
+        [DEBUG] Hello world!
+
+    Code:
+        from pylogs import Logger
+        from pylogs.message_types.critical_message import CriticalMessage
 
 
-    def add(a, b):
-        if (not isinstance(a, float)) or (not isinstance(a, float)):
-            Logger.log(CriticalMessage(), "Syntax error on line x")
-            raise TypeError("A and B have to be of the type float.")
-        return a + b
+        def add(a, b):
+            if (not isinstance(a, float)) or (not isinstance(a, float)):
+                Logger.log(CriticalMessage(), "A and B have to be of the type float.")
+                # you should probably raise an error here
+            return a + b
+
+        add(1, 2)
+    Output:
+        [CRITICAL] A and B have to be of the type float.
+
+    Code:
+        from pylogs import Logger
+        from pylogs.message_types.debug_message import DebugMessage
+        Logger.log_to_file(DebugMessage(), "Hello world!", "example.pylog")
+    Note:
+        You can display the content of the file by running:
+        "cat example.pylog" on macOS + Linux and "type example.pylog" on Windows
 """
 
 
