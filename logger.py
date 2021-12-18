@@ -5,16 +5,16 @@ This python library allows you to easily create logs for your code.
 
 Example code:
     Code:
-        from pylogs import Logger
-        from pylogs.message_types.debug_message import DebugMessage
+        from bitlogs import Logger
+        from bitlogs.message_types.debug_message import DebugMessage
 
         Logger.log(DebugMessage(), "Hello world!")
     Output:
         [DEBUG] Hello world!
 
     Code:
-        from pylogs import Logger
-        from pylogs.message_types.critical_message import CriticalMessage
+        from bitlogs import Logger
+        from bitlogs.message_types.critical_message import CriticalMessage
 
 
         def add(a, b):
@@ -28,12 +28,12 @@ Example code:
         [CRITICAL] A and B have to be of the type float.
 
     Code:
-        from pylogs import Logger
-        from pylogs.message_types.debug_message import DebugMessage
-        Logger.log_to_file(DebugMessage(), "Hello world!", "example.pylog")
+        from bitlogs import Logger
+        from bitlogs.message_types.debug_message import DebugMessage
+        Logger.log_to_file(DebugMessage(), "Hello world!", "example.bitlog")
     Note:
         You can display the content of the file by running:
-        "cat example.pylog" on macOS + Linux and "type example.pylog" on Windows
+        "cat example.bitlog" on macOS + Linux and "type example.bitlog" on Windows
 """
 
 

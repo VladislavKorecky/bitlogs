@@ -1,18 +1,18 @@
-# PyLogs
+# BitLogs
 **Version 1.0.0**
 
 This python library allows you to easily create logs for your code.
 
 ## Installation instructions
 1. Open up your terminal
-2. Run ```pip install pylogs```
-3. Import it to your project (```import pylogs```)
+2. Run ```pip install bitlogs```
+3. Import it to your project (```import bitlogs```)
 
 ## Example code
 Code:
 ```python
-from pylogs import Logger
-from pylogs.message_types.debug_message import DebugMessage
+from bitlogs import Logger
+from bitlogs.message_types.debug_message import DebugMessage
 
 Logger.log(DebugMessage(), "Hello world!")
 ```
@@ -23,8 +23,8 @@ Output:
 ---
 Code:
 ```python
-from pylogs import Logger
-from pylogs.message_types.critical_message import CriticalMessage
+from bitlogs import Logger
+from bitlogs.message_types.critical_message import CriticalMessage
 
 
 def add(a, b):
@@ -41,9 +41,9 @@ Output:
 ```
 ---
 ```python
-from pylogs import Logger
-from pylogs.message_types.debug_message import DebugMessage
+from bitlogs import Logger
+from bitlogs.message_types.debug_message import DebugMessage
 
-Logger.log_to_file(DebugMessage(), "Hello world!", "example.pylog")
+Logger.log_to_file(DebugMessage(), "Hello world!", "example.bitlog")
 ```
-You can display the content of the file by running: ```cat example.pylog``` on macOS + Linux and ```type example.pylog``` on Windows
+You can display the content of the file by running: ```cat example.bitlog``` on macOS + Linux and ```type example.bitlog``` on Windows

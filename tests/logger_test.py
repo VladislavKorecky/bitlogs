@@ -33,7 +33,7 @@ class LoggerTest(TestCase):
         Logger.log(CriticalMessage(), "Syntax error on line x")
 
     def test_log_to_file(self):
-        if exists("test.pylog"):
-            remove("test.pylog")
+        if exists("test.bitlog"):
+            remove("test.bitlog")
 
-        Logger.log_to_file(DebugMessage(), "Hello world!", "test.pylog")
+        Logger.log_to_file(DebugMessage(), "Hello world!", "test.bitlog")
