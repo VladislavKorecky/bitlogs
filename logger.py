@@ -1,5 +1,5 @@
 """
-[Version 1.0.0]
+[Version 1.0.1]
 
 This python library allows you to easily create logs for your code.
 
